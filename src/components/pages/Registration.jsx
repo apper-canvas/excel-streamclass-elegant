@@ -7,7 +7,7 @@ import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import ApperIcon from "@/components/ApperIcon";
 import { registrationService } from "@/services/api/registrationService";
-import { webinarService } from "@/services/api/webinarService";
+import webinarService from "@/services/api/webinarService";
 
 const Registration = () => {
   const { webinarId } = useParams();
