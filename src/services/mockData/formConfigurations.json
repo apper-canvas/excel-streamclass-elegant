@@ -1,0 +1,109 @@
+[
+  {
+    "Id": 1,
+    "name": "Standard Registration",
+    "description": "Basic registration form for general webinars",
+    "fields": [
+      {
+        "id": "firstName",
+        "type": "text",
+        "label": "First Name",
+        "required": true,
+        "order": 1
+      },
+      {
+        "id": "lastName",
+        "type": "text",
+        "label": "Last Name",
+        "required": true,
+        "order": 2
+      },
+      {
+        "id": "email",
+        "type": "email",
+        "label": "Email Address",
+        "required": true,
+        "order": 3
+      },
+      {
+        "id": "company",
+        "type": "text",
+        "label": "Company",
+        "required": false,
+        "order": 4
+      },
+      {
+        "id": "jobTitle",
+        "type": "text",
+        "label": "Job Title",
+        "required": false,
+        "order": 5
+      }
+    ],
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Technical Workshop",
+    "description": "Extended form for technical workshops with experience level",
+    "fields": [
+      {
+        "id": "firstName",
+        "type": "text",
+        "label": "First Name",
+        "required": true,
+        "order": 1
+      },
+      {
+        "id": "lastName",
+        "type": "text",
+        "label": "Last Name",
+        "required": true,
+        "order": 2
+      },
+      {
+        "id": "email",
+        "type": "email",
+        "label": "Email Address",
+        "required": true,
+        "order": 3
+      },
+      {
+        "id": "company",
+        "type": "text",
+        "label": "Company",
+        "required": false,
+        "order": 4
+      },
+      {
+        "id": "experience",
+        "type": "select",
+        "label": "Experience Level",
+        "required": true,
+        "options": [
+          {"value": "beginner", "label": "Beginner (0-1 years)"},
+          {"value": "intermediate", "label": "Intermediate (2-5 years)"},
+          {"value": "advanced", "label": "Advanced (5+ years)"}
+        ],
+        "order": 5
+      },
+      {
+        "id": "interests",
+        "type": "textarea",
+        "label": "Areas of Interest",
+        "required": false,
+        "order": 6
+      },
+      {
+        "id": "newsletter",
+        "type": "checkbox",
+        "label": "Subscribe to our newsletter",
+        "required": false,
+        "order": 7
+      }
+    ],
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00Z"
+  }
+]

@@ -8,6 +8,7 @@ import Dashboard from "@/components/pages/Dashboard";
 import Schedule from "@/components/pages/Schedule";
 import WebinarRoom from "@/components/pages/WebinarRoom";
 import JoinRoom from "@/components/pages/JoinRoom";
+import Registration from "@/components/pages/Registration";
 import messages from "@/services/mockData/messages.json";
 import questions from "@/services/mockData/questions.json";
 import participants from "@/services/mockData/participants.json";
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Layout>
-        <Routes>
+<Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/room/:roomCode" element={<WebinarRoom />} />
           <Route path="/join" element={<JoinRoom />} />
@@ -26,6 +27,8 @@ const App = () => {
           <Route path="/polls" element={<PollsPage />} />
           <Route path="/recordings" element={<Recordings />} />
           <Route path="/recordings/:id" element={<Recordings />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/registration/:webinarId" element={<Registration />} />
         </Routes>
       </Layout>
       
