@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "title": "React Best Practices Workshop",
+    "description": "Learn advanced React patterns and best practices for building scalable applications. We'll cover hooks, performance optimization, and testing strategies.",
+    "scheduledAt": "2024-01-20T14:00:00Z",
+    "roomCode": "REACT1",
+    "hostId": "1",
+    "isRecording": true,
+    "status": "live"
+  },
+  {
+    "Id": 2,
+    "title": "Digital Marketing Fundamentals",
+    "description": "Comprehensive overview of digital marketing strategies including SEO, social media marketing, and content creation.",
+    "scheduledAt": "2024-01-22T16:30:00Z",
+    "roomCode": "DGTMKT",
+    "hostId": "2",
+    "isRecording": false,
+    "status": "scheduled"
+  },
+  {
+    "Id": 3,
+    "title": "Introduction to Machine Learning",
+    "description": "Beginner-friendly introduction to ML concepts, algorithms, and practical applications in business.",
+    "scheduledAt": "2024-01-15T10:00:00Z",
+    "roomCode": "MLINTR",
+    "hostId": "1",
+    "isRecording": true,
+    "status": "ended"
+  },
+  {
+    "Id": 4,
+    "title": "Project Management Masterclass",
+    "description": "Advanced project management techniques using Agile methodology and modern tools.",
+    "scheduledAt": "2024-01-25T13:00:00Z",
+    "roomCode": "PROJMGR",
+    "hostId": "3",
+    "isRecording": false,
+    "status": "scheduled"
+  },
+  {
+    "Id": 5,
+    "title": "UX Design Principles",
+    "description": "Essential UX design principles and methodologies for creating user-centered digital products.",
+    "scheduledAt": "2024-01-18T11:30:00Z",
+    "roomCode": "UXDESN",
+    "hostId": "2",
+    "isRecording": true,
+    "status": "ended"
+  },
+  {
+    "Id": 6,
+    "title": "Financial Planning for Startups",
+    "description": "Strategic financial planning, fundraising, and budget management for early-stage startups.",
+    "scheduledAt": "2024-01-28T15:00:00Z",
+    "roomCode": "FINPLN",
+    "hostId": "4",
+    "isRecording": false,
+    "status": "scheduled"
+  },
+  {
+    "Id": 7,
+    "title": "Cloud Architecture on AWS",
+    "description": "Designing scalable cloud solutions using AWS services and best practices for enterprise applications.",
+    "scheduledAt": "2024-01-12T09:00:00Z",
+    "roomCode": "AWSCLR",
+    "hostId": "1",
+    "isRecording": true,
+    "status": "ended"
+  },
+  {
+    "Id": 8,
+    "title": "Content Creation Strategy",
+    "description": "Effective content creation strategies for social media, blogs, and video platforms.",
+    "scheduledAt": "2024-01-30T14:30:00Z",
+    "roomCode": "CONTNT",
+    "hostId": "3",
+    "isRecording": false,
+    "status": "scheduled"
+  }
+]

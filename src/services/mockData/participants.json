@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "name": "Sarah Johnson",
+    "role": "host",
+    "joinedAt": "2024-01-20T13:45:00Z",
+    "isVideoOn": true,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 2,
+    "name": "Michael Chen",
+    "role": "presenter",
+    "joinedAt": "2024-01-20T13:50:00Z",
+    "isVideoOn": true,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 3,
+    "name": "Emily Rodriguez",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T13:58:00Z",
+    "isVideoOn": false,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 4,
+    "name": "David Kim",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:02:00Z",
+    "isVideoOn": true,
+    "isAudioOn": false,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Thompson",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:05:00Z",
+    "isVideoOn": false,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 6,
+    "name": "Robert Davis",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:08:00Z",
+    "isVideoOn": true,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 7,
+    "name": "Amanda Wilson",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:10:00Z",
+    "isVideoOn": false,
+    "isAudioOn": false,
+    "connectionStatus": "disconnected"
+  },
+  {
+    "Id": 8,
+    "name": "James Miller",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:12:00Z",
+    "isVideoOn": true,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 9,
+    "name": "Jennifer Brown",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:15:00Z",
+    "isVideoOn": false,
+    "isAudioOn": true,
+    "connectionStatus": "connected"
+  },
+  {
+    "Id": 10,
+    "name": "Christopher Lee",
+    "role": "attendee",
+    "joinedAt": "2024-01-20T14:18:00Z",
+    "isVideoOn": true,
+    "isAudioOn": false,
+    "connectionStatus": "connected"
+  }
+]

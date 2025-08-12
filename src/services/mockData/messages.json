@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "participantId": 2,
+    "content": "Welcome everyone to today's React workshop!",
+    "timestamp": "2024-01-20T14:01:00Z",
+    "type": "chat"
+  },
+  {
+    "Id": 2,
+    "participantId": 3,
+    "content": "Thanks for hosting this session, looking forward to learning!",
+    "timestamp": "2024-01-20T14:02:30Z",
+    "type": "chat"
+  },
+  {
+    "Id": 3,
+    "participantId": 1,
+    "content": "David Kim has joined the webinar",
+    "timestamp": "2024-01-20T14:02:45Z",
+    "type": "system"
+  },
+  {
+    "Id": 4,
+    "participantId": 4,
+    "content": "Hello everyone! Excited to be here",
+    "timestamp": "2024-01-20T14:03:15Z",
+    "type": "chat"
+  },
+  {
+    "Id": 5,
+    "participantId": 2,
+    "content": "We'll start with an overview of React hooks and best practices",
+    "timestamp": "2024-01-20T14:04:00Z",
+    "type": "chat"
+  },
+  {
+    "Id": 6,
+    "participantId": 5,
+    "content": "Will the slides be shared after the session?",
+    "timestamp": "2024-01-20T14:05:30Z",
+    "type": "chat"
+  },
+  {
+    "Id": 7,
+    "participantId": 1,
+    "content": "Yes, all materials will be available in the follow-up email",
+    "timestamp": "2024-01-20T14:06:00Z",
+    "type": "chat"
+  },
+  {
+    "Id": 8,
+    "participantId": 6,
+    "content": "Great session so far! The examples are very clear",
+    "timestamp": "2024-01-20T14:25:15Z",
+    "type": "chat"
+  },
+  {
+    "Id": 9,
+    "participantId": 8,
+    "content": "Could you explain more about the useEffect cleanup function?",
+    "timestamp": "2024-01-20T14:28:45Z",
+    "type": "chat"
+  },
+  {
+    "Id": 10,
+    "participantId": 2,
+    "content": "Absolutely! Let me demonstrate that in the next example",
+    "timestamp": "2024-01-20T14:29:00Z",
+    "type": "chat"
+  }
+]
