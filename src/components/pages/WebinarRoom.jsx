@@ -254,7 +254,7 @@ const handleAnswerQuestion = async (questionId) => {
         </div>
 
 {/* Sidebar */}
-<WebinarSidebar
+        <WebinarSidebar
           messages={messages}
           questions={questions}
           polls={polls}
@@ -269,7 +269,7 @@ const handleAnswerQuestion = async (questionId) => {
           onVotePoll={handleVotePoll}
           onMuteParticipant={handleMuteParticipant}
           onRemoveParticipant={handleRemoveParticipant}
-          className="flex"
+          className="w-80 flex-shrink-0 bg-surface border-l border-gray-700"
         />
       </div>
     </div>
