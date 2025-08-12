@@ -21,7 +21,20 @@ export const getWebinarById = async (id) => {
 
 export const getWebinarByRoomCode = async (roomCode) => {
   await delay(250);
-  const webinar = webinars.find(w => w.roomCode === roomCode);
+// Named exports for individual functions
+export { getWebinars, getWebinarById, getWebinarByRoomCode, createWebinar, updateWebinar, deleteWebinar };
+
+// Default export as service object
+const webinarService = {
+  getWebinars,
+  getWebinarById,
+  getWebinarByRoomCode,
+  createWebinar,
+  updateWebinar,
+  deleteWebinar
+};
+
+export default webinarService;
   if (!webinar) {
     throw new Error("Webinar room not found");
   }
