@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import ApperIcon from "@/components/ApperIcon";
 import ChatPanel from "@/components/organisms/ChatPanel";
 import QAPanel from "@/components/organisms/QAPanel";
+import PollsPanel from "@/components/organisms/PollsPanel";
 import ParticipantsList from "@/components/organisms/ParticipantsList";
 import { cn } from "@/utils/cn";
 
 const WebinarSidebar = ({ 
   messages = [], 
   questions = [], 
+  polls = [],
   participants = [], 
   onSendMessage,
   onSubmitQuestion,
   onUpvoteQuestion,
   onAnswerQuestion,
+  onCreatePoll,
+  onVotePoll,
   onMuteParticipant,
   onRemoveParticipant,
   currentUser,
@@ -21,7 +25,7 @@ const WebinarSidebar = ({
 }) => {
   const [activeTab, setActiveTab] = useState("chat");
 
-  const tabs = [
+const tabs = [
     { 
       key: "chat", 
       label: "Chat", 
@@ -35,6 +39,12 @@ const WebinarSidebar = ({
       count: questions.filter(q => !q.isAnswered).length 
     },
     { 
+      key: "polls", 
+      label: "Polls", 
+      icon: "BarChart3", 
+      count: polls.filter(p => p.isActive).length 
+    },
+    { 
       key: "participants", 
       label: "People", 
       icon: "Users", 
@@ -42,7 +52,7 @@ const WebinarSidebar = ({
     }
   ];
 
-  const renderTabContent = () => {
+const renderTabContent = () => {
     switch (activeTab) {
       case "chat":
         return (
@@ -63,6 +73,16 @@ const WebinarSidebar = ({
             onAnswerQuestion={onAnswerQuestion}
             currentUser={currentUser}
             isHost={isHost}
+          />
+        );
+      case "polls":
+        return (
+          <PollsPanel
+            polls={polls}
+            currentUser={currentUser}
+            isHost={isHost}
+            onCreatePoll={onCreatePoll}
+            onVotePoll={onVotePoll}
           />
         );
       case "participants":

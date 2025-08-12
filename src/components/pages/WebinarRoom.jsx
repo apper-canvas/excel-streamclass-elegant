@@ -8,20 +8,21 @@ import { getWebinarByRoomCode } from "@/services/api/webinarService";
 import { getParticipants } from "@/services/api/participantService";
 import { getMessages, createMessage } from "@/services/api/messageService";
 import { getQuestions, createQuestion, updateQuestion } from "@/services/api/questionService";
+import { getPolls, createPoll, votePoll } from "@/services/api/pollService";
 import { toast } from "react-toastify";
 
 const WebinarRoom = () => {
   const { roomCode } = useParams();
   const navigate = useNavigate();
   
-  const [webinar, setWebinar] = useState(null);
+const [webinar, setWebinar] = useState(null);
   const [participants, setParticipants] = useState([]);
   const [messages, setMessages] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [polls, setPolls] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
-
   // Mock current user - in a real app this would come from auth
   const [currentUser] = useState({
     Id: 1,
@@ -32,20 +33,22 @@ const WebinarRoom = () => {
     connectionStatus: "connected"
   });
 
-  const loadRoomData = async () => {
+const loadRoomData = async () => {
     try {
       setError(null);
-      const [webinarData, participantsData, messagesData, questionsData] = await Promise.all([
+      const [webinarData, participantsData, messagesData, questionsData, pollsData] = await Promise.all([
         getWebinarByRoomCode(roomCode),
         getParticipants(),
         getMessages(),
-        getQuestions()
+        getQuestions(),
+        getPolls()
       ]);
       
       setWebinar(webinarData);
       setParticipants(participantsData);
       setMessages(messagesData);
       setQuestions(questionsData);
+      setPolls(pollsData);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -105,7 +108,7 @@ const WebinarRoom = () => {
     }
   };
 
-  const handleAnswerQuestion = async (questionId) => {
+const handleAnswerQuestion = async (questionId) => {
     try {
       const question = questions.find(q => q.Id === questionId);
       if (!question) return;
@@ -125,6 +128,38 @@ const WebinarRoom = () => {
     }
   };
 
+  const handleCreatePoll = async (pollData) => {
+    try {
+      const newPoll = await createPoll({
+        ...pollData,
+        createdBy: currentUser?.name || "Host",
+        webinarId: webinar?.Id
+      });
+      
+      setPolls(prev => [...prev, newPoll]);
+      toast.success("Poll created successfully");
+    } catch (err) {
+      toast.error("Failed to create poll");
+    }
+  };
+
+  const handleVotePoll = async (pollId, optionIndex) => {
+    try {
+      const updatedPoll = await votePoll(pollId, {
+        optionIndex,
+        userId: currentUser?.Id || 1
+      });
+      
+      setPolls(prev => 
+        prev.map(p => p.Id === pollId ? updatedPoll : p)
+      );
+      
+      toast.success("Vote submitted successfully");
+    } catch (err) {
+      toast.error("Failed to submit vote");
+    }
+  };
+
   const handleToggleVideo = () => {
     // In a real app, this would toggle the user's video stream
     toast.info("Video toggled");
@@ -139,7 +174,6 @@ const WebinarRoom = () => {
     setIsScreenSharing(prev => !prev);
     toast.info(isScreenSharing ? "Screen sharing stopped" : "Screen sharing started");
   };
-
   const handleMuteParticipant = (participantId) => {
     toast.info("Participant muted");
   };
@@ -219,10 +253,11 @@ const WebinarRoom = () => {
           />
         </div>
 
-        {/* Sidebar */}
+{/* Sidebar */}
         <WebinarSidebar
           messages={messages}
           questions={questions}
+          polls={polls}
           participants={participants}
           currentUser={currentUser}
           isHost={isHost}
@@ -230,6 +265,8 @@ const WebinarRoom = () => {
           onSubmitQuestion={handleSubmitQuestion}
           onUpvoteQuestion={handleUpvoteQuestion}
           onAnswerQuestion={handleAnswerQuestion}
+          onCreatePoll={handleCreatePoll}
+          onVotePoll={handleVotePoll}
           onMuteParticipant={handleMuteParticipant}
           onRemoveParticipant={handleRemoveParticipant}
           className="hidden lg:flex"
