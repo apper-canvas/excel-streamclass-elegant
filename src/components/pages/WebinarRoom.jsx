@@ -254,7 +254,7 @@ const handleAnswerQuestion = async (questionId) => {
         </div>
 
 {/* Sidebar */}
-        <WebinarSidebar
+<WebinarSidebar
           messages={messages}
           questions={questions}
           polls={polls}
@@ -269,7 +269,7 @@ const handleAnswerQuestion = async (questionId) => {
           onVotePoll={handleVotePoll}
           onMuteParticipant={handleMuteParticipant}
           onRemoveParticipant={handleRemoveParticipant}
-          className="hidden lg:flex"
+          className="flex"
         />
       </div>
     </div>
