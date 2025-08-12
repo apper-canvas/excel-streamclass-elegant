@@ -176,6 +176,24 @@ export const sendReminders = async (webinarId, reminderType = "email") => {
       });
     }
   }
-  
-  return results;
+return results;
 };
+
+// Default export object for components that import { registrationService }
+const registrationService = {
+  getRegistrations,
+  getRegistrationsByWebinar,
+  getRegistrationById,
+  createRegistration,
+  updateRegistration,
+  deleteRegistration,
+  getFormConfigurations,
+  getFormConfigurationById,
+  getActiveFormConfiguration,
+  createFormConfiguration,
+  updateFormConfiguration,
+  sendReminders
+};
+
+export { registrationService };
+export default registrationService;
