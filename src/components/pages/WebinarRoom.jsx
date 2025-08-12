@@ -200,7 +200,7 @@ const handleAnswerQuestion = async (questionId) => {
   return (
     <div className="h-screen bg-background flex flex-col">
       {/* Room Header */}
-      <div className="bg-surface/50 border-b border-secondary/20 px-6 py-4">
+<div className="bg-surface/50 border-b border-secondary/20 px-6 py-4 relative z-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
