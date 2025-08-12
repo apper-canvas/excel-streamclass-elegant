@@ -9,5 +9,4 @@ const Layout = ({ children, webinar, participantCount }) => {
     </div>
   );
 };
-
 export default Layout;
