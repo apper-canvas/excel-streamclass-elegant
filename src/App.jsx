@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import PollsPage from "@/components/pages/PollsPage";
 import Layout from "@/components/organisms/Layout";
@@ -16,9 +16,9 @@ import polls from "@/services/mockData/polls.json";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Layout>
-<Routes>
+        <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/room/:roomCode" element={<WebinarRoom />} />
           <Route path="/join" element={<JoinRoom />} />
@@ -39,9 +39,9 @@ const App = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+theme="dark"
       />
-    </Router>
+    </BrowserRouter>
   );
 };
 
