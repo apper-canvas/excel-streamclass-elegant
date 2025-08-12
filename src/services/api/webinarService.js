@@ -21,20 +21,7 @@ export const getWebinarById = async (id) => {
 
 export const getWebinarByRoomCode = async (roomCode) => {
   await delay(250);
-// Named exports for individual functions
-export { getWebinars, getWebinarById, getWebinarByRoomCode, createWebinar, updateWebinar, deleteWebinar };
-
-// Default export as service object
-const webinarService = {
-  getWebinars,
-  getWebinarById,
-  getWebinarByRoomCode,
-  createWebinar,
-  updateWebinar,
-  deleteWebinar
-};
-
-export default webinarService;
+  const webinar = webinars.find(w => w.roomCode === roomCode);
   if (!webinar) {
     throw new Error("Webinar room not found");
   }
@@ -74,3 +61,18 @@ export const deleteWebinar = async (id) => {
   webinars.splice(index, 1);
   return true;
 };
+
+// Named exports for individual functions
+export { getWebinars, getWebinarById, getWebinarByRoomCode, createWebinar, updateWebinar, deleteWebinar };
+
+// Default export as service object
+const webinarService = {
+  getWebinars,
+  getWebinarById,
+  getWebinarByRoomCode,
+  createWebinar,
+  updateWebinar,
+  deleteWebinar
+};
+
+export default webinarService;
