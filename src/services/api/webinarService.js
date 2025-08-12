@@ -62,9 +62,6 @@ export const deleteWebinar = async (id) => {
   return true;
 };
 
-// Named exports for individual functions
-export { getWebinars, getWebinarById, getWebinarByRoomCode, createWebinar, updateWebinar, deleteWebinar };
-
 // Default export as service object
 const webinarService = {
   getWebinars,
